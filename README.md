@@ -4,10 +4,6 @@ Example of how to use braintree on a Nextjs App
 
 ## Helpful links
 
-- <https://medium.com/@dennisokeeffe/depth-series-3-getting-started-with-the-braintree-sandbox-9f49f474bb1a>
-
-- <https://github.com/Cretezy/braintree-web-drop-in-react>
-
 - <https://github.com/braintree/braintree_express_example>
 
 - <https://developers.braintreepayments.com/guides/client-sdk/setup/javascript/v3>
@@ -19,4 +15,3 @@ Example of how to use braintree on a Nextjs App
 - <https://developers.braintreepayments.com/guides/hosted-fields/examples/javascript/v3>
 
 - <https://developers.braintreepayments.com/start/tutorial>
-
