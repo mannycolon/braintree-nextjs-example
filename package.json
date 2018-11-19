@@ -1,7 +1,7 @@
 {
   "name": "braintree-nextjs-example",
   "version": "0.1.0",
-  "description": "",
+  "description": "Example of how to use braintree on a Nextjs App",
   "scripts": {
     "build": "npm run build:next && npm run build:server",
     "build:next": "next build",
