@@ -2,6 +2,14 @@
 
 Example of how to use braintree on a Nextjs App
 
+## Install
+
+```bash
+yarn add braintree-web-drop-in-react
+# or
+npm install braintree-web-drop-in-react
+```
+
 ## Helpful links
 
 - <https://github.com/braintree/braintree_express_example>
