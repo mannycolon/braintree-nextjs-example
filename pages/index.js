@@ -27,7 +27,9 @@ class Index extends Component {
   async buy() {
     try {
       // Send the nonce to your server
-      const { nonce } = await this.instance.tokenize()
+      // const { nonce } = await this.instance.tokenize()
+      const { nonce } = await this.instance.requestPaymentMethod();
+
       const response = await axios.post(
         'http://localhost:8000/api/braintree/v1/sandbox',
         { paymentMethodNonce: nonce }
@@ -48,7 +50,7 @@ class Index extends Component {
       )
     } else {
       return (
-        <div className="container ">
+        <div className="container">
           <DropIn
             className="drop-in-container"
             options={{
