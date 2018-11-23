@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
-import DropIn from '../components/BraintreeWebDropIn'
+import { BraintreeHostedFields } from 'braintree-web-react'
 
-import './BraintreeWebDropIn.styles.css'
+import './index.css'
 
 class Index extends Component {
   state = {
@@ -27,8 +27,7 @@ class Index extends Component {
   async buy() {
     try {
       // Send the nonce to your server
-      // const { nonce } = await this.instance.tokenize()
-      const { nonce } = await this.instance.requestPaymentMethod();
+      const { nonce } = await this.instance.tokenize()
 
       const response = await axios.post(
         'http://localhost:8000/api/braintree/v1/sandbox',
@@ -51,7 +50,7 @@ class Index extends Component {
     } else {
       return (
         <div className="container">
-          <DropIn
+          <BraintreeHostedFields
             className="drop-in-container"
             options={{
               authorization: this.state.clientToken
@@ -71,7 +70,7 @@ class Index extends Component {
               <label className="hosted-fields--label">Postal Code</label>
               <div id="postal-code" className="hosted-field"></div>
             </form>
-          </DropIn>
+          </BraintreeHostedFields>
           <button className="submit" onClick={this.buy.bind(this)}>Submit</button>
         </div>
       )

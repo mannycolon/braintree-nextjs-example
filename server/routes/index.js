@@ -27,7 +27,7 @@ routes.post('/braintree/v1/sandbox', async (req, res) => {
     const clientNonce = req.body.paymentMethodNonce
     console.log(clientNonce)
     // create transaction for $15
-    const newTransaction = gateway.transaction.sale({
+    gateway.transaction.sale({
       amount: '15.00',
       paymentMethodNonce: clientNonce,
       options: {
